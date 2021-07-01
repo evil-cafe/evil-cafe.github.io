@@ -1,13 +1,15 @@
-
-
 <head>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
 <title>Evil Cafe</title>
 </head>
 <header>
 <h1> <p style="color:#AF0000">Evil Cafe</p> </h1>
-<body bgcolor=”#000000">
-</header/
+</header>
+<style>
+body {
+  background-image: url('3491.jpg');
+}
+</style>
 <body>
 Upload Images
 </body>
