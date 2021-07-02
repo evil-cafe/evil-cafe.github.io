@@ -48,15 +48,16 @@ body {
 
   <script>
   ChangeIt();
+  let song = document.getElementById('audioplayer');
   document.body.addEventListener('click', function () {
-   let song = document.getElementById('audioplayer');
    song.volume = 0.4;
    song.play()
-    audioElement.addEventListener('ended', function() {
-    song.currentTime = 0;
-    song.play();
-}, false);
-});
+   });
+  song.addEventListener('ended', function() {
+  song.currentTime = 0;
+  song.play();
+  }, false);
+
   </script>
   
 </body>
