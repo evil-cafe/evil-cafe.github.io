@@ -10,11 +10,11 @@ function ChangeIt()
 var num = Math.ceil( Math.random() * totalCount );
 document.body.background = 'images/'+num+'.gif';
 document.body.style.backgroundSize = "cover";// Background repeat
+
 }
 </script>
 
 <style>
-  
 .center {
   text-align: center;
 }
@@ -27,7 +27,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  
 </style>
 
 </head>
@@ -36,7 +35,7 @@ body {
 <header>
   
 <div class="center">
-<h1> <p style="font-family:Tahoma">[evil cafe]</p> </h1>
+<h1 id="h"> <p style="font-family:Tahoma">[evil cafe]</p> </h1>
 <div/>
 
 </header>
@@ -47,17 +46,24 @@ body {
 
 <script>
 ChangeIt();
-    
+
 let song = document.getElementById('audioplayer');
 document.body.addEventListener('click', function () {
-  song.volume = 0.4;
-  song.play()
-  });
+song.volume = 0.4;
+song.play()
+});
 
- song.addEventListener('ended', function() {
-  song.currentTime = 0;
-  song.play();
-  }, false);
+song.addEventListener('ended', function() {
+song.currentTime = 0;
+song.play();
+}, false);
+
+var bg = document.body.background
+if (bg == "images/4.gif" || bg == "images/5.gif" || bg == "images/6.gif" || bg == "images/7.gif" || bg == "images/8.gif" || bg == "images/9.gif") {
+document.getElementById("h").style.color = "white";
+} else {
+document.getElementById("h").style.color = "black";
+}
 </script>
-  
+
 </body>
