@@ -36,11 +36,12 @@ body {
    let song = document.getElementById('audioplayer');
    song.volume = 0.5;
    song.play()
-});
     audioElement.addEventListener('ended', function() {
     song.currentTime = 0;
     song.play();
 }, false);
+});
+
   </script>
   
 <audio id="audioplayer" src="Cafe-Music.mp3" type="audio/mpeg" loop="loop"> </audio>
