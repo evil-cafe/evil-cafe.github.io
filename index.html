@@ -23,7 +23,10 @@ body {
 <div/>
 </header>
 <body>
-<audio autoplay loop>
-    <source src="Cafe-Music.mp3" type="audio/mpeg" />
-</audio>
+  <script>
+  window.onload = function() {
+    document.getElementById("audioplayer").play();
+}
+</script>
+<audio id="audioplayer" src="Cafe-Music.mp3" type="audio/mpeg" loop="loop"> </audio>
 </body>
