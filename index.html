@@ -1,8 +1,11 @@
 <head>
+  
 <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
 <title>Evil Cafe</title>
+  
 </head>
 <style>
+  
 .center {
   text-align: center;
 }
@@ -16,13 +19,18 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  
 </style>
+
 <header>
+  
 <div class="center">
 <h1> <p style="font-family:Tahoma">[evil cafe]</p> </h1>
 <div/>
 </header>
+  
 <body>
+
   <script>
   document.body.addEventListener('click', function () {
    let song = document.getElementById('audioplayer');
@@ -30,5 +38,14 @@ body {
    song.play()
 });
 </script>
+
+  <script>
+    audioElement.addEventListener('ended', function() {
+    song.currentTime = 0;
+    song.play();
+}, false);
+  </script>
+  
 <audio id="audioplayer" src="Cafe-Music.mp3" type="audio/mpeg" loop="loop"> </audio>
+
 </body>
