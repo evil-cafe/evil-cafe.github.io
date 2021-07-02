@@ -24,9 +24,22 @@ body {
 </header>
 <body>
   <script>
-document.body.addEventListener('click', function () {
-   document.getElementById("audioplayer").play()
-});
+  window.onload = function() {
+    let song = document.getElementById('audioplayer');
+    song.load();
+    playSong();
+  }
+
+  function playSong() {
+    fetch('Cafe-Music.mp3')
+    .then(response => response.blob())
+    .then(blob => {
+      song.srcObject = blob;
+      return song.play();
+    })
+    .then(_ => {})
+    .catch(e => {})
+  }
 </script>
 <audio id="audioplayer" src="Cafe-Music.mp3" type="audio/mpeg" loop="loop"> </audio>
 </body>
