@@ -1,9 +1,22 @@
+
+
+
 <head>
   
-<link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
 <title>Evil Cafe</title>
-  
-</head>
+
+<script>
+var totalCount = 9;
+function ChangeIt() 
+{
+var num = Math.ceil( Math.random() * totalCount );
+document.body.background = 'images/'+num+'.gif';
+document.body.style.backgroundSize = "cover";// Background repeat
+
+}
+</script>
+
 <style>
   
 .center {
@@ -15,25 +28,29 @@ h1 {
   color:black
 }
 body {
-  background-image: url('gif4.gif');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   
 </style>
 
+</head>
+
+
 <header>
   
 <div class="center">
 <h1> <p style="font-family:Tahoma">[evil cafe]</p> </h1>
 <div/>
+
 </header>
   
 <body>
 
-<audio id="audioplayer" src="Cafe-Music.mp3" type="audio/mpeg" loop="loop"> </audio>
+<audio id="audioplayer" src="audio/Cafe-Music.mp3" type="audio/mpeg" loop="loop"> </audio>
 
   <script>
+  ChangeIt();
   document.body.addEventListener('click', function () {
    let song = document.getElementById('audioplayer');
    song.volume = 0.4;
@@ -43,7 +60,6 @@ body {
     song.play();
 }, false);
 });
-
   </script>
-
+  
 </body>
