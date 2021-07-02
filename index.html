@@ -10,7 +10,6 @@ function ChangeIt()
 var num = Math.ceil( Math.random() * totalCount );
 document.body.background = 'images/'+num+'.gif';
 document.body.style.backgroundSize = "cover";// Background repeat
-
 }
 </script>
 
@@ -46,17 +45,19 @@ body {
 
 <audio id="audioplayer" src="audio/Cafe-Music.mp3" type="audio/mpeg" loop="loop"> </audio>
 
-  <script>
-  ChangeIt();
-  let song = document.getElementById('audioplayer');
-  document.body.addEventListener('click', function () {
-   song.volume = 0.4;
-   song.play()
-   });
-  song.addEventListener('ended', function() {
+<script>
+ChangeIt();
+    
+let song = document.getElementById('audioplayer');
+document.body.addEventListener('click', function () {
+  song.volume = 0.4;
+  song.play()
+  });
+
+ song.addEventListener('ended', function() {
   song.currentTime = 0;
   song.play();
   }, false);
-  </script>
+</script>
   
 </body>
