@@ -1,0 +1,111 @@
+<head>
+  
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+<title>Evil Cafe</title>
+ 
+
+<meta property="og:url" content="https://evil.cafe/">
+<meta property="og:title" content="evil cafe">
+<meta property="og:type" content="website">
+<meta property="og:description" content="evil cafe"><meta property="og:image" content="https://evil.cafe/images/embed1.png?height=630&pad_color=fff&v=1651351803&width=1200">
+  <meta property="og:image:secure_url" content="https://evil.cafe/images/embed1.png?height=630&pad_color=fff&v=1651351803&width=1200">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="evil cafe">
+<meta name="twitter:description" content="evil cafe">
+
+
+<script>
+var totalCount = 1;
+function ChangeIt() 
+{
+var num = Math.ceil( Math.random() * totalCount );
+document.body.background = 'images/'+num+'.gif';
+document.body.style.backgroundSize = "cover";// Background repeat
+}
+</script>
+
+<style>
+.center {
+  text-align: center;
+}
+h1 {
+  position: relative;
+  top: 70px;
+  color:black
+}
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+</style>
+
+</head>
+
+
+<header>
+  
+<div class="center">
+<h1 id="h"> <p style="font-family:Helvetica">Evil Cafe is an image hosting website.</p> </h1>
+<div/>
+
+</header>
+  
+<body>
+
+<audio id="audioplayer" src="audio/pierre.mp3" type="audio/mpeg" loop="loop"> </audio>
+
+<script>
+ChangeIt();
+
+let song = document.getElementById('audioplayer');
+document.body.addEventListener('click', function () {
+song.volume = 0.5;
+song.play()
+});
+
+song.addEventListener('ended', function() {
+song.currentTime = 0;
+song.play();
+}, false);
+
+let bg = document.body.background
+if (bg == "images/3.gif" || bg == "images/4.gif" || bg == "images/5.gif" || bg == "images/6.gif" || bg == "images/7.gif" || bg == "images/8.gif" || bg == "images/14.gif" || bg == "images/15.gif" || bg == "images/16.gif") {
+document.getElementById("h").style.color = "white";
+} else {
+document.getElementById("h").style.color = "black";
+}
+</script>
+
+<style>
+a:link {
+  color: ForestGreen;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: gray;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: gray;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+
+
+
+
+
+
+</body>
